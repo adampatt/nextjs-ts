@@ -10,7 +10,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "cypress:open": "cypress open",
-    "cypress-test": "start-server-and-test dev 3000 cypress:open"
+    "cypress-test": "start-server-and-test dev 3000 cypress:open",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@babel/core": "^7.16.12",
@@ -46,6 +47,7 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-unicorn": "^40.1.0",
+    "husky": "^7.0.4",
     "jest": "^27.4.7",
     "prettier": "^2.5.1",
     "start-server-and-test": "^1.14.0",

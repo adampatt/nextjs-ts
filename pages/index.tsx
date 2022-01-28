@@ -1,17 +1,19 @@
-import React, { FC } from 'react';
+// eslint-disable-next-line eslint-comments/disable-enable-pair
+/* eslint-disable react/function-component-definition */
+import React from 'react';
 import Head from 'next/head';
 import styles from '@styles/Home.module.css';
 
-const Home: FC = () => (
+const Home: React.FC = () => (
   <div className={styles.container}>
     <Head>
-      <title>Create Next App</title>
+      <title>Create asd</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
     <main className={styles.main}>
       <h1 className={styles.title}>
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
+        to <a href="https://nextjs.org">Next.js!</a>
       </h1>
 
       <p className={styles.description}>
@@ -49,8 +51,10 @@ const Home: FC = () => (
         href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Link to aria"
       >
-        Powered by <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+        {' '}
+        Some text
       </a>
     </footer>
   </div>

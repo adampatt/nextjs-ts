@@ -45,7 +45,8 @@
     "noFallthroughCasesInSwitch": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "incremental": true
+    "incremental": true,
+    "types": ["cypress"]
   },
   "include": [
     "next-env.d.ts",

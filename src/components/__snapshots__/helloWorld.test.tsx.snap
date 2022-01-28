@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a message: 
+        <p>
+            Hello World
+        </p>
+     1`] = `
+<div>
+  Hello World
+</div>
+`;

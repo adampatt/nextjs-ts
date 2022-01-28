@@ -1,74 +1,58 @@
 {
-"env": {
-  "browser": true,
-  "es2021": true,
-  "node": true,
-  "jest": true
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+    "jest": true
   },
-"extends": [
-    "next",
-    "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
+  "extends": [
+    "next", 
+    "next/core-web-vitals", 
     "airbnb",
-    "plugin:prettier/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
-    "plugin:jsx-ally/recommended",
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended", 
+    "plugin:eslint-comments/recommended",
+    "plugin:jest/recommended",
+    "plugin:promise/recommended",
+    "plugin:unicorn/recommended",
+    "prettier" // Prettier must be last.
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "eslint-comments",
+    "jest",
+    "promise",
+    "import",
+    "unicorn",
     "prettier"
   ],
-"parser": "@typescript-eslint/parser",
-"parserOptions": {
-  "ecmaFeatures": {
-    "jsx": true
-    },
-  "ecmaVersion": "latest",
-  "sourceType": "module"
-  },
-"plugins": ["react", "@typescript-eslint"],
-"rules": {
+  "rules": {
     "prettier/prettier": "error",
     "@typescript-eslint/no-unused-vars": "error",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/no-explicit/any": "error",
-    "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": "off",
-    "import/extensions": "off",
-    "import/no-unresolved": "error",
-    "import/order": [
-      "error",
-      {
-      "groups": ["builtin", "external", "internal", ["parent", "sibling", "index"]],
-      "pathGroups": [
-          {
-          "pattern": "react",
-          "group": "external",
-          "position": "before",
-          },
-        ],
-      "pathGroupsExcludedImportTypes": ["react"],
-        "newlines-between": "never",
-      "alphabetize": {
-        "order": "asc",
-        "caseInsensitive": true
-        }
-      }
-    ],
-    "import/no-extraneous-dependencies": [
-      "error",
-      {"devDependencies": ["jest.setup.ts", "**/*.test.tsx", "**/*.spec.tsx", "**/*.test.ts", "**/*.spec.ts"] },
-    ],
+	  "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "error",
+    "import/prefer-default-export": "off",
+    "import/no-default-export": "off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "unicorn/prevent-abbreviations": "off",
+    "unicorn/no-array-for-each": "off",
+    "import/no-extraneous-dependencies": "off"
   },
-"settings": {
-  "react": {
-    "version": "detect",
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
     },
     "import/resolver": {
-    "typescript": {
-      "project": "."
-      },
-    },
-  },
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.json"
+      }
+    }
+  }
 }
